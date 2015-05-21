@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>WBT</title>
+   <!-- Styles -->
+    <link rel="stylesheet" href="src/css/wbtStyle.css"/>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="src/css/bootstrap-theme.min.css"/>
+   <!-- JS -->
+    <script src="src/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/localStorage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/modal.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/loacalStorage.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/framework.js" type="text/javascript" charset="utf-8"></script>
+   <!-- JS-Module -->
+   <script src="src/js/accordion.js" type="text/javascript" charset="utf-8"></script>
+   <script src="src/js/video.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/audio.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/value.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/dragDrop.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/gallery.js" type="text/javascript" charset="utf-8"></script>
+   <script src="src/js/multiple-choice.js" type="text/javascript" charset="utf-8"></script>
+   <script>
+			function test(){
+				document.getElementById('a1').play();
+				document.getElementById('a2').play();
+				document.getElementById('a3').play();
+			}
+			
+			function pause(){
+				document.getElementById('a1').pause();
+				document.getElementById('a2').pause();
+				document.getElementById('a3').pause();
+			}
+						
+			function farbe(id){
+				if(document.getElementById('btn'+id).className == "col-md-2  btn btn-default"){
+					document.getElementById('btn'+id).className = "col-md-2  btn btn-warning";
+							document.getElementById('a'+id).muted = false;
+				}else{
+					document.getElementById('btn'+id).className = "col-md-2  btn btn-default";
+							document.getElementById('a'+id).muted = true;
+				}
+			}
+			
+		</script>
+
+</head>
+<body>
+<div class="container">
+    <nav class="mainNavigation"></nav>
+    <div class="row">
+        <div class="col-md-9 col-xs-9">
+            <section data-linear="1">
+                <h1>Musik WBT</h1> 
+                <article>
+                   <h2></h2>
+                   <div class="module" >
+				   <img src="C:/Users/Meister Dachs/Desktop/RIM-Musik-liegt-in-der-Luft_very_large.jpg" style="width:83%"/>
+                   </div>
+                </article>
+				<article>
+                   <h2>Test Article 2</h2>
+                   <div class="module" >
+				  <audio  id="a1">
+						<source src="C:/Users/Meister Dachs/Music/Fuck Off Get Free/04 LITTLE ONES RUN.mp3" type="audio/mpeg">
+					</audio> </br>
+					<audio  id="a2">
+						<source src="C:/Users/Meister Dachs/Music/Fuck Off Get Free/04 LITTLE ONES RUN.mp3" type="audio/mpeg">
+					</audio> </br>
+					<audio  id="a3">
+						<source src="C:/Users/Meister Dachs/Music/Fuck Off Get Free/04 LITTLE ONES RUN.mp3" type="audio/mpeg">
+					</audio> 
+					<audio  id="a4">
+						<source src="C:/Users/Meister Dachs/Music/Fuck Off Get Free/04 LITTLE ONES RUN.mp3" type="audio/mpeg">
+					</audio> </br>
+					<audio  id="a5">
+						<source src="C:/Users/Meister Dachs/Music/Fuck Off Get Free/04 LITTLE ONES RUN.mp3" type="audio/mpeg">
+					</audio> </br>
+					<audio  id="a6">
+						<source src="C:/Users/Meister Dachs/Music/Fuck Off Get Free/04 LITTLE ONES RUN.mp3" type="audio/mpeg">
+					</audio> </br>
+					</br></br>
+					<a href="#" onclick="test();"> Play </a>
+					
+					<div class="row">
+						<div class="col-md-2  btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="farbe('1')" id="btn1">
+						test
+						</div>
+						<div class="col-md-2  btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="farbe('2')" id="btn2">
+						test 2
+						</div>
+						<div class="col-md-2  btn btn-default" style=" margin-bottom:0px" onclick="farbe('3')" id="btn3">
+						test 3
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-2  btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="farbe('4')" id="btn4">
+						test
+						</div>
+						<div class="col-md-2  btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="farbe('5')" id="btn5" >
+						test 2
+						</div>
+						<div class="col-md-2 btn btn-default" style=" margin-bottom:0px" onclick="farbe('6')" id="btn6">
+						test 3
+						</div>
+					</div>
+					
+                   </div>
+                </article>              
+            </section>
+    </div>
+</div>
+</body>
+</html>
