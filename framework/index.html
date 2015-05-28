@@ -29,9 +29,13 @@
 			window.onload = function () {
 				document.getElementById('a1').muted = true;       
 				document.getElementById('a2').muted = true;       
-				document.getElementById('a3').muted = true;       
+				document.getElementById('a3').muted = true;  
 			};
-   
+				
+			window.onhashchange = function(){
+				stop();
+			}
+			
 			function play(){
 				document.getElementById('a1').play();
 				document.getElementById('a2').play();
@@ -42,6 +46,15 @@
 				document.getElementById('a1').pause();
 				document.getElementById('a2').pause();
 				document.getElementById('a3').pause();
+			}
+			
+			function stop(){
+				document.getElementById('a1').pause();
+				document.getElementById('a1').currentTime = 0;			
+				document.getElementById('a2').pause();
+				document.getElementById('a2').currentTime = 0;
+				document.getElementById('a3').pause();
+				document.getElementById('a3').currentTime = 0;
 			}
 			
 			function farbe(id){
@@ -97,8 +110,8 @@
 					</div>
 					
 					<div style="margin-top:20px">
-						<a href="#" onclick="play();"> Play </a>
-						<a href="#" onclick="pause();"> Pause </a>
+						<div class="btn btn-info" onclick="play();"> Play </div>
+						<a href="" onclick="pause();"> Pause </a>
 					</div>
 					
                    </div>
