@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>WBT</title>
+   <!-- Styles -->
+    <link rel="stylesheet" href="src/css/wbtStyle.css"/>
+    <link rel="stylesheet" href="src/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="src/css/bootstrap-theme.min.css"/>
+   <!-- JS -->
+    <script src="src/js/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/localStorage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/modal.js" type="text/javascript" charset="utf-8"></script>
+	<script src="src/js/loacalStorage.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/framework.js" type="text/javascript" charset="utf-8"></script>
+   <!-- JS-Module -->
+   <script src="src/js/accordion.js" type="text/javascript" charset="utf-8"></script>
+   <script src="src/js/video.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/audio.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/value.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/dragDrop.js" type="text/javascript" charset="utf-8"></script>
+    <script src="src/js/gallery.js" type="text/javascript" charset="utf-8"></script>
+   <script src="src/js/multiple-choice.js" type="text/javascript" charset="utf-8"></script>
+   <script>
+			window.onload = function () {
+				document.getElementById('a1').muted = true;       
+				document.getElementById('a2').muted = true;       
+				document.getElementById('a3').muted = true;
+				//document.getElementById('hai').muted = true;
+				document.getElementById('a4').muted = true;
+				document.getElementById('a5').muted = true;
+
+			};
+			
+			window.onhashchange = function(){
+				stop();
+			}
+			
+   
+			function play(){
+				document.getElementById('a1').play();
+				document.getElementById('a2').play();
+				document.getElementById('a3').play();
+
+			}
+
+			function stop(){
+				for(var i = 1; i <= 5; i++){
+				document.getElementById('a'+i).pause();
+				document.getElementById('a'+i).currentTime = 0;		
+					document.getElementById('btn'+i).className = "col-md-2 btn btn-default";     
+				}
+			}
+			
+			function playVideoSounds(i){
+				document.getElementById('video').play();
+				stop();
+				document.getElementById('a'+i).play();
+				farbe(i);
+			}
+			
+			function pause(){
+				document.getElementById('a1').pause();
+				document.getElementById('a2').pause();
+				document.getElementById('a3').pause();
+				document.getElementById('a4').pause();
+				document.getElementById('a5').pause();
+			}
+			
+			function farbe(id){
+				if(document.getElementById('btn'+id).className == "col-md-2 btn btn-default"){    
+					document.getElementById('btn'+id).className = "col-md-2 btn btn-warning";     
+							document.getElementById('a'+id).muted = false;                        
+				}else{                                                                            
+					document.getElementById('btn'+id).className = "col-md-2 btn btn-default";     
+							document.getElementById('a'+id).muted = true;                         
+				}                                                                                 
+			}                                                                                     
+			
+		</script>
+
+</head>
+<body>
+<div class="container">
+    <nav class="mainNavigation"></nav>
+    <div class="row">
+        <div class="col-md-9 col-xs-9">
+            <section data-linear="1">
+                <h1>Musik Grundlagen</h1> 
+                <article>
+                   <h2>Grundlagen</h2>
+                   <div class="module accordion" >
+                    <p data-title="Rahmen erschaffen">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    <p data-title="Rhythmik und Dynamik">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+					<p data-title="Stimmungserzeugung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+					<p data-title="Thematik">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        </div>
+                </article>
+				<article>
+                   <h2>Erweitert</h2>
+                   <div class="module accordion" >
+                    <p data-title="Rahmen erschaffen">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                    <p data-title="Rhythmik und Dynamik">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+					<p data-title="Stimmungserzeugung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+					<p data-title="Thematik">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        </div>
+                </article>
+			</section>
+			<section data-linear="2">
+                <h1>Musik Interaktion</h1> 
+				<article>
+                   <h2>Rhythmik und Dynamik</h2>
+                   <div class="module" >
+				  <audio loop id="a1">
+						<source src="src/data/audio/a.wav" type="audio/mpeg">
+					</audio> </br>
+					<audio loop id="a2">
+					<source src="src/data/audio/b.wav" type="audio/mpeg">
+					</audio> </br>
+					<audio loop id="a3">
+						<source src="src/data/audio/c.wav" type="audio/mpeg">
+					</audio> 
+					</br></br>
+
+					<div class="row">
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="farbe('1')" id="btn1">
+						test
+						</div>
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="farbe('2')" id="btn2">
+						test 2
+						</div>
+						<div class="col-md-2 btn btn-default" style=" margin-bottom:0px" onclick="farbe('3')" id="btn3">
+						test 3
+						</div>
+					</div>
+					
+					<div style="margin-top:20px">
+						<div class="btn btn-info" onclick="play();"> Play </div>
+						<div class="btn btn-info" onclick="pause();"> Pause </div>
+					</div>
+					
+                   </div>
+                </article>              
+            </section>
+			<section data-linear="3">
+				<h1>Audiovisuelle Anwendung</h1>
+
+                <article>
+                    <h2>DER WEISSE HAI</h2>
+
+					<audio loop id="a4">
+						<source src="src/data/audio/gefahr.mp3" type="audio/mpeg">
+					</audio>
+					<audio loop id="a5">
+						<source src="src/data/audio/romantisch.mp3" type="audio/mpeg">
+					</audio>
+
+					
+					
+					<video width="320" id="video" height="240" muted>
+					  <source src="http://videos.cdn.moviepilot.de/20141101/1764/1_ghfg353w_1_jbyes9md_1.mp4" type="video/mp4">
+					</video>
+					
+                    <br>
+					<div class="row">
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('4')" id="btn4">
+							Gefahr
+						</div>
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('5')" id="btn5">
+							Romantisch
+						</div>
+					</div>
+			
+                </article>
+			</section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

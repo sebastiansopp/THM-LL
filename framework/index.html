@@ -27,6 +27,15 @@
    <script src="src/js/multiple-choice.js" type="text/javascript" charset="utf-8"></script>
     <script src="src/js/music.js" type="text/javascript" charset="utf-8"></script>
 </head>
+
+<style>
+
+.walkingButton{display:none !important;}
+
+
+</style>
+
+
 <body>
 <div class="container">
     <nav class="mainNavigation"></nav>
@@ -70,20 +79,31 @@
 					</br></br>
 
 					<div class="row">
-						<div class="col-md-4" onclick="farbe('1')" id="btn1">
-						bla
-						</div>
-						<div class="col-md-4" onclick="farbe('2')" id="btn2">
-						test 2      
-						</div>      
-						<div class="col-md-4"  onclick="farbe('3')" id="btn3">
-						test 3
+						<div class="col-md-12">
+							<div class="row"> 
+								<div class="col-md-1 off" onclick="farbe('1')" id="btn1" style="margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/gesang_icon_an.jpg" style="width: 70px;" />
+									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn1"/>
+								</div>
+							</div>
+							<div class="row"> 
+								<div class="col-md-1 off" onclick="farbe('2')" id="btn2" style="margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 70px;" />      
+									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn2"/>
+								</div>  
+							</div>
+							<div class="row"> 
+								<div class="col-md-1 off"  onclick="farbe('3')" id="btn3" style="margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/gitarre_icon_an.jpg" style="width: 70px;" />
+									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn3"/>
+								</div>
+							</div>
 						</div>
 					</div>
 					
 					<div style="margin-top:20px">
-						<div class="btn btn-info" onclick="play();"> Play </div>
-						<div class="btn btn-info" onclick="pause();"> Pause </div>
+						<div class="btn btn-info" onclick='play(["a1","a2","a3"]);'> Play </div>
+						<div class="btn btn-info" onclick='pause(["a1","a2","a3"]);'> Pause </div>
 					</div>
 					
                    </div>
@@ -102,12 +122,16 @@
 						<source src="src/data/audio/romantisch.mp3" type="audio/mpeg">
 					</audio>
 
-					<video width="320" id="video" height="240" muted>
-					  <source src="http://videos.cdn.moviepilot.de/20141101/1764/1_ghfg353w_1_jbyes9md_1.mp4" type="video/mp4">
-					</video>
-					
-                    <br>
 					<div class="row">
+						<div class="col-md-12"> 
+							<video loop id="video" muted>
+							  <source src="http://videos.cdn.moviepilot.de/20141101/1764/1_ghfg353w_1_jbyes9md_1.mp4" type="video/mp4">
+							</video>
+						</div>
+					</div>
+
+                    <br>
+					<div class="row" style="padding-left: 14px;">
 						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('4')" id="btn4">
 							Gefahr
 						</div>

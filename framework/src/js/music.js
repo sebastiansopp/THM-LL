@@ -1,56 +1,55 @@
 
+			var COUNTAUDIOFILES = 5;
+			var COUNTVIDEOFILES = 1;
 
 			window.onload = function () {
-				document.getElementById('a1').muted = true;       
-				document.getElementById('a2').muted = true;       
-				document.getElementById('a3').muted = true;
-				//document.getElementById('hai').muted = true;
-				document.getElementById('a4').muted = true;
-				document.getElementById('a5').muted = true;
-
+				for(var i = 1; i <= COUNTAUDIOFILES; i++){
+				document.getElementById('a'+i).muted = true;       
+				}
 			};
 			
 			window.onhashchange = function(){
 				stop();
 			}
    
-			function play(){
-				document.getElementById('a1').play();
-				document.getElementById('a2').play();
-				document.getElementById('a3').play();
-
+			function play(objects){
+				for(var key in objects) {
+					document.getElementById(objects[key]).play();
+				}	
 			}
 
 			function stop(){
-				for(var i = 1; i <= 5; i++){
-				document.getElementById('a'+i).pause();
-				document.getElementById('a'+i).currentTime = 0;		
-					document.getElementById('btn'+i).className = "col-md-2 btn btn-default";     
+				for(var i = 1; i <= COUNTAUDIOFILES; i++){
+					document.getElementById('a'+i).pause();
+					document.getElementById('a'+i).currentTime = 0;		
+				}
+				for(var i = 1; i <= 3; i++){
+					document.getElementById('xBtn'+i).style.visibility = "visible";	
 				}
 			}
-			
+
 			function playVideoSounds(i){
-				document.getElementById('video').play();
 				stop();
-				document.getElementById('a'+i).play();
-				farbe(i);
+				play(["a"+i, "video"]);
+				document.getElementById('a'+i).muted = false; 
 			}
 			
-			function pause(){
-				document.getElementById('a1').pause();
-				document.getElementById('a2').pause();
-				document.getElementById('a3').pause();
-				document.getElementById('a4').pause();
-				document.getElementById('a5').pause();
+			function pause(objects){
+				for(var key in objects) {
+					document.getElementById(objects[key]).pause();
+				}	
 			}
 			
 			function farbe(id){
-				if(document.getElementById('btn'+id).className == "col-md-2 btn btn-default"){    
-					document.getElementById('btn'+id).className = "col-md-2 btn btn-warning";     
-							document.getElementById('a'+id).muted = false;                        
-				}else{                                                                            
-					document.getElementById('btn'+id).className = "col-md-2 btn btn-default";     
-							document.getElementById('a'+id).muted = true;                         
+				if(document.getElementById('btn'+id).className == "col-md-1 off"){    
+					document.getElementById('btn'+id).className = "col-md-1 on";     
+					document.getElementById('a'+id).muted = false; 
+					document.getElementById('xBtn'+id).style.visibility = "hidden";
+							
+				}else{                                                     
+					document.getElementById('btn'+id).className = "col-md-1 off";     
+					document.getElementById('a'+id).muted = true;  
+					document.getElementById('xBtn'+id).style.visibility = "visible";	
 				}                                                                                 
 			}                                                                                     
 		
