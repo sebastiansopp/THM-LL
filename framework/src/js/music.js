@@ -1,7 +1,7 @@
 
 			var COUNTAUDIOFILES = 4;
-			var COUNTVIDEOAUDIOFILES = 4;
-			var COUNTVIDEOFILES = 2;
+			var COUNTVIDEOAUDIOFILES = 8;
+			var COUNTVIDEOFILES = 4;
 
 			window.onload = function () {
 				for(var i = 1; i <= COUNTAUDIOFILES; i++){

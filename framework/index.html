@@ -26,20 +26,23 @@
     <script src="src/js/gallery.js" type="text/javascript" charset="utf-8"></script>
    <script src="src/js/multiple-choice.js" type="text/javascript" charset="utf-8"></script>
     <script src="src/js/music.js" type="text/javascript" charset="utf-8"></script>
+
 </head>
 
 <style>
 
 .walkingButton{display:none !important;}
-
+body{font-family: arials;}
 
 </style>
 
 
-<body>
+<body background="">
+
 <div class="container">
     <nav class="mainNavigation"></nav>
     <div class="row">
+	
         <div class="col-md-9 col-xs-9">
             <section data-linear="1">
                 <h1>Musik Grundlagen</h1> 
@@ -224,17 +227,14 @@
             </section>
 			<section data-linear="3">
 				<h1>Audiovisuelle Anwendung</h1>
-
                 <article>
                     <h2>Der weiße Hai</h2>
-
 					<audio loop id="videoAudio1">
 						<source src="src/data/audio/wh_gefahr.mp3" type="audio/mpeg">
 					</audio>
 					<audio loop id="videoAudio2">
 						<source src="src/data/audio/wh_romantisch.mp3" type="audio/mpeg">
 					</audio>
-
 					<div class="row">
 						<div class="col-md-12"> 
 							<video loop id="video1" muted>
@@ -242,7 +242,6 @@
 							</video>
 						</div>
 					</div>
-
                     <br>
 					<div class="row" style="padding-left: 14px;">
 						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio1', 'video1')" id="btn4">
@@ -252,19 +251,15 @@
 							Romantisch
 						</div>
 					</div>
-			
                 </article>
-				
-				 <article>
+				<article>
                     <h2>Rocky</h2>
-
 					<audio loop id="videoAudio3">
 						<source src="src/data/audio/rocky_motivierender.mp3" type="audio/mpeg">
 					</audio>
 					<audio loop id="videoAudio4">
 						<source src="src/data/audio/rocky_laecherlich.mp3" type="audio/mpeg">
 					</audio>
-
 					<div class="row">
 						<div class="col-md-12"> 
 							<video loop id="video2" muted>
@@ -272,7 +267,6 @@
 							</video>
 						</div>
 					</div>
-
                     <br>
 					<div class="row" style="padding-left: 14px;">
 						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio3', 'video2')" id="btn6">
@@ -282,9 +276,57 @@
 							Lächerlich
 						</div>
 					</div>
-			
                 </article>
-				
+				 <article>
+                    <h2>Psycho</h2>
+					<audio loop id="videoAudio5">
+						<source src="src/data/audio/mp3" type="audio/mpeg">
+					</audio>
+					<audio loop id="videoAudio6">
+						<source src="src/data/audio/mp3" type="audio/mpeg">
+					</audio>
+					<div class="row">
+						<div class="col-md-12"> 
+							<video loop id="video2" muted>
+							  <source src="src/data/video/.mp4" type='video/mp4' >
+							</video>
+						</div>
+					</div>
+                    <br>
+					<div class="row" style="padding-left: 14px;">
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio5', 'video3')" id="btn6">
+							Erotisch
+						</div>
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio6', 'video3')" id="btn6">
+							Unheimlich
+						</div>
+					</div>
+                </article>
+				<article>
+                    <h2>Der Soldat James Ryan</h2>
+					<audio loop id="videoAudio7">
+						<source src="src/data/audio/.mp3" type="audio/mpeg">
+					</audio>
+					<audio loop id="videoAudio8">
+						<source src="src/data/audio/.mp3" type="audio/mpeg">
+					</audio>
+					<div class="row">
+						<div class="col-md-12"> 
+							<video loop id="video2" muted>
+							  <source src="src/data/video/.mp4" type='video/mp4' >
+							</video>
+						</div>
+					</div>
+                    <br>
+					<div class="row" style="padding-left: 14px;">
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio7', 'video3')" id="btn6">
+							Energisch
+						</div>
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio8', 'video3')" id="btn6">
+							Traurig
+						</div>
+					</div>
+                </article>
 			</section>
         </div>
     </div>
