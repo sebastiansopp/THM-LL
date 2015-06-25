@@ -1,15 +1,17 @@
 
-			var COUNTAUDIOFILES = 5;
-			var COUNTVIDEOFILES = 1;
+			var COUNTAUDIOFILES = 4;
+			var COUNTVIDEOAUDIOFILES = 4;
+			var COUNTVIDEOFILES = 2;
 
 			window.onload = function () {
 				for(var i = 1; i <= COUNTAUDIOFILES; i++){
-				document.getElementById('a'+i).muted = true;       
+					document.getElementById('audio'+i).muted = true;     
 				}
 			};
 			
 			window.onhashchange = function(){
 				stop();
+				stopAllVideos();
 			}
    
 			function play(objects){
@@ -18,20 +20,38 @@
 				}	
 			}
 
+			function  stopAllVideos(){
+			for(var i = 1; i <= COUNTVIDEOFILES; i++){
+					document.getElementById('video'+i).pause();
+					document.getElementById('video'+i).currentTime = 0;		
+				}
+			}
+			
 			function stop(){
 				for(var i = 1; i <= COUNTAUDIOFILES; i++){
-					document.getElementById('a'+i).pause();
-					document.getElementById('a'+i).currentTime = 0;		
+					document.getElementById('audio'+i).pause();
+					document.getElementById('audio'+i).currentTime = 0;	
+					document.getElementById('audio'+i).muted = true;     					
 				}
-				for(var i = 1; i <= 3; i++){
+				for(var i = 1; i <= COUNTAUDIOFILES; i++){
+					if(document.getElementById('xBtn'+i) != null ){
 					document.getElementById('xBtn'+i).style.visibility = "visible";	
+					document.getElementById('btn'+i).className = "col-md-1 off";  
+					}
+					if(document.getElementById('text'+i) != null ){
+						document.getElementById('text'+i).style.visibility = "hidden";	
+					}
+				}
+				for(var i = 1; i <= COUNTVIDEOAUDIOFILES; i++){
+					document.getElementById('videoAudio'+i).pause();
+					document.getElementById('videoAudio'+i).currentTime = 0;		
 				}
 			}
 
-			function playVideoSounds(i){
-				stop();
-				play(["a"+i, "video"]);
-				document.getElementById('a'+i).muted = false; 
+			function playVideoSounds(videoAudio, video){
+				stop();							
+				play([videoAudio, video]);
+				document.getElementById(videoAudio).muted = false; 
 			}
 			
 			function pause(objects){
@@ -40,16 +60,18 @@
 				}	
 			}
 			
-			function farbe(id){
+			function switchAudio(id){
 				if(document.getElementById('btn'+id).className == "col-md-1 off"){    
 					document.getElementById('btn'+id).className = "col-md-1 on";     
-					document.getElementById('a'+id).muted = false; 
+					document.getElementById('audio'+id).muted = false; 
 					document.getElementById('xBtn'+id).style.visibility = "hidden";
+					document.getElementById('text'+id).style.visibility = "visible";
 							
 				}else{                                                     
 					document.getElementById('btn'+id).className = "col-md-1 off";     
-					document.getElementById('a'+id).muted = true;  
-					document.getElementById('xBtn'+id).style.visibility = "visible";	
+					document.getElementById('audio'+id).muted = true;  
+					document.getElementById('xBtn'+id).style.visibility = "visible";
+					document.getElementById('text'+id).style.visibility = "hidden";					
 				}                                                                                 
 			}                                                                                     
 		

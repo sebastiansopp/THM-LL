@@ -46,9 +46,39 @@
                 <article>
                    <h2>Grundlagen</h2>
                    <div class="module accordion" >
-                    <p data-title="Rahmen erschaffen">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                    <p data-title="Rhythmik und Dynamik">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-					<p data-title="Stimmungserzeugung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                    <p data-title="Rahmen erschaffen">
+						Am Beginn jeder Komposition stehen die Kadenzen – 
+						die Abfolge der Grundakkorde die das Lied ausmachen sollen.
+						Die klassische Harmonielehre bietet vielfältige Möglichkeiten von Abfolgen,
+						derer man sich bedienen kann. Einfache Kadenzabfolgen können durch weitere Möglichkeiten 
+						der Harmonielehre erweitert und ausgebaut werden. 
+						</br></br>
+						Quintenzirkel</br>
+						Intervalle</br>
+						Kirchentonleitern</br>
+						Grundtonarten/Kadenzen (Tonika, Subdominante, Dominante etc.)
+						</br>
+						</br>
+						Quintfolge</br>
+						</br>
+						Tonartwechsel</br>
+						</br>
+						Substitution</br>
+						</br>
+						Transposition
+					<p data-title="Rhythmik und Dynamik"> Rhythmik</br>
+						(Drumset, Percussion, Zusammenspiel Sets)
+						</br></br>
+						Dynamik Instrumental
+						</br></br>
+						Streicher (Pizz., Stacc.,)</br>
+						Saiten (Anschlagsmögl.)</br>
+						Gegenbewegungen</br>
+					<p data-title="Stimmungserzeugung">  Instrumentalisierung allgemein
+					</br>
+						Wirkungsgrundlage (kl. Instrum.kunde)</br>
+						Gegenbewegung</br>
+						Kompositionsgrundlagen (Quint/Oktavparallelen, Wichtigkeit von 7,9 und 11, Vermeidungshinweise, Tritonussubst. Etc.)
 					<p data-title="Thematik">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                         </div>
                 </article>
@@ -67,80 +97,194 @@
 				<article>
                    <h2>Rhythmik und Dynamik</h2>
                    <div class="module" >
-				  <audio loop id="a1">
-						<source src="src/data/audio/a.wav" type="audio/mpeg">
+				  <audio loop id="audio1">
+						<source src="src/data/audio/bsp1Piano.mp3" type="audio/mpeg">
 					</audio> </br>
-					<audio loop id="a2">
-					<source src="src/data/audio/b.wav" type="audio/mpeg">
+					<audio loop id="audio2">
+					<source src="src/data/audio/bsp1StreicherDynamik.mp3" type="audio/mpeg">
 					</audio> </br>
-					<audio loop id="a3">
-						<source src="src/data/audio/c.wav" type="audio/mpeg">
+					<audio loop id="audio3">
+						<source src="src/data/audio/bsp1Streicherruhig.mp3" type="audio/mpeg">
+					</audio> 
+					<audio loop id="audio4">
+						<source src="src/data/audio/bsp1Drums.mp3" type="audio/mpeg">
 					</audio> 
 					</br></br>
 
 					<div class="row">
 						<div class="col-md-12">
 							<div class="row"> 
-								<div class="col-md-1 off" onclick="farbe('1')" id="btn1" style="margin-bottom:10px; cursor:pointer;">
-									<img src="src\data\image\icons/gesang_icon_an.jpg" style="width: 70px;" />
+								<div class="col-md-1 off" onclick="switchAudio('1')" id="btn1" style="margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/klavier_icon_an.jpg" style="width: 70px;" />
 									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn1"/>
 								</div>
+								<div class="col-md-2" style="margin-top: 13px;"> Klavier </div>
+								<div class="col-md-9 invisible" id="text1"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+							</div>
 							</div>
 							<div class="row"> 
-								<div class="col-md-1 off" onclick="farbe('2')" id="btn2" style="margin-bottom:10px; cursor:pointer;">
+								<div class="col-md-1 off" onclick="switchAudio('2')" id="btn2" style="margin-bottom:10px; cursor:pointer;">
 									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 70px;" />      
 									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn2"/>
 								</div>  
+								<div class="col-md-2"  style="margin-top: 13px;"> Streicher </div>
+								<div class="col-md-9 invisible" id="text2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+								</div>
 							</div>
 							<div class="row"> 
-								<div class="col-md-1 off"  onclick="farbe('3')" id="btn3" style="margin-bottom:10px; cursor:pointer;">
-									<img src="src\data\image\icons/gitarre_icon_an.jpg" style="width: 70px;" />
+								<div class="col-md-1 off"  onclick="switchAudio('3')" id="btn3" style="margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 70px;" />
 									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn3"/>
 								</div>
+								<div class="col-md-2" style="margin-top: 13px;"> Streicher </div>
+								<div class="col-md-9 invisible" id="text3"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+								</div>
+							</div>
+							<!-- Hier noch eine Audiospur einfügen -->
+							<div class="row"> 
+								<div class="col-md-1 off"  onclick="switchAudio('4')" id="btn4" style="margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/drums_icon_an.jpg" style="width: 70px;" />
+									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn4"/>
+								</div>
+								
+								<div class="col-md-2"  style="margin-top: 13px;"> Schlagzeug </div>
+								<div class="col-md-9 invisible" id="text4"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+							</div>
 							</div>
 						</div>
 					</div>
-					
+					<!-- Nice to Have: Visualisierung der Audiospur -->
 					<div style="margin-top:20px">
-						<div class="btn btn-info" onclick='play(["a1","a2","a3"]);'> Play </div>
-						<div class="btn btn-info" onclick='pause(["a1","a2","a3"]);'> Pause </div>
+						<div class="btn btn-info" onclick='play(["audio1","audio2","audio3","audio4"]);'> Play </div>
+						<div class="btn btn-info" onclick='pause(["audio1","audio2","audio3","audio4"]);'> Pause </div>
 					</div>
 					
                    </div>
-                </article>              
+                </article>  
+
+				<article>
+					<h2>Musik und Emotionen</h2>
+					Man ist sich einig, dass sich Musik lustig oder traurig anhört, ob dies Emotionen aber auch tatsächlich auslöst, ist umstritten. Und selbst unter denen, die es bejahen, wird diskutiert, welcher Art diese Emotionen sind. (Schellenberg & Hunter, 2010)
+					</br>
+					Man unterscheidet zwei Vertreter der Emotionsforschung:
+					</br>
+					</br>
+					- <b>Kognitivisten</b>: Affektive Antworten von Hörern stammen von der Evaluation der Musik und nicht von der Musik selbst (Kivy, 1980, 1990, 2001). Menschen nenn Musik "traurig" oder "fröhlich", weil diese Fröhlichkeit und Traurigkeit ausdrückt, nicht, weil die Musik sie traurig oder fröhlich macht.
+					</br>
+					</br>
+					- <b>Emotivisten</b>: Musik löst tatsächlich Emotionen aus, die kognitive Beurteilung zu erklären, ist jedoch schwer (Davies 2001). Manche behaupten sogar, eine Beurteilung fände garnicht statt, sondern es handele sich um eine smpathische Reaktion (Ridley, 1995; Levinson, 1996). Davies argumentiert, durch Musik transportierte Gefühle wirkten "ansteckend", so wie gewöhnliche soziale Interaktion mit besonders fröhlichen oder deprimierten Menschen.
+					</br>
+					</br>
+					Musik variiert in mehreren Dimensionen (Tempo, Modus, Lautstärke, Tonhöhe), welche alle emotionale Antworten beeinflussen. In den meisten Studien beschräntken sich diese Antworten aber häufig auf Fröhlichkeit und Traurigkeit, sehr viel seltener Angst oder Zorn. Diese Emotionen werden fast ausschließlich genannt, wenn der Stimulus speziell für diese Emotion designed wurde.
+					</br>
+					Dass Charakteristiken von Musik Emotionen herovrrufen können, ist bekannt, wie sie das tun, muss noch erforscht werden. Standardisierte affektive Musikstücke (wie vorgeschlagen von Viellard et al. 2008), könnten dabei helfen.
+					</br>
+					</br>
+					</br>
+					<b>Messung</b>
+					</br>
+					</br>
+					<u>- Durch Selbstauskunft (behaviorale Maße)</u>
+					</br>
+					+ valide und reliabel + leicht interpretierbar + billig
+					</br>
+					</br>
+					<u>- Phsiologische Maße (Puls, Blutdruck, etc.)</u>
+					</br>
+					+ Messen arousal - Messen keine Valenz +/- Gesichtsmessung
+					</br>
+					</br>
+					<u>- Neurologische Maße</u>
+					</br>
+					+ Messen positive/negative Antworten - Messen keine spezifischen Emotionen
+					</br>
+					</br>
+					<u>- Patienten mit Hirnschäden</u>
+					</br>
+					+ Zeigen Zusammenhang von Musik und Amygdala-Aktivität - Bisher zu wenige Studien
+					</br>
+					</br>
+					</br>
+					<b>Chills</b>
+					</br>
+					Chills sind die stärkste emotionale Antwort auf Musik. Man spricht allgemein von einer "tingling sensation", welche die Mehrheit der Population bereits einmal erlebt hat. Mit "Chills" befasst sich ebenfalls ein Item des Big Five Personalit Inventory. Dieses ist bester Prädiktor für die Dimension "Offenheit für Neues" (McCrae, 2007).
+					</br>
+					PET-Studien zeigten, dass "chillige" Musik bestimmte Belohnungszentren im aktiviert, eine Wirkung, ähnlich der von Kokain. Die meisten Beschreibungen des Gefühls besagen, es konzentriere sich auf den Nacken und die obere Wirbelsäule, während andere behaupten, es breite sich in die Beine aus. Außer erhöhter Hautleitfähigkeit gibt es aber keine anderen physiologischen Reaktionen.
+					</br>
+					Warum "chills" nur bei Exposition gegenüber Musik und anderen ästhetischen Eindrücken vorkommen, ist bis heute unbekannt.
+					</br>
+					</br>
+					</br>
+					<b>Musikgeschmack</b>
+					</br>
+					Konsonanz ist ein basaler Einfluss darauf, ob man Musik mag, Dissonanz bewirkt meist das Gegenteil, unabhängig von Alter und kulturellem Hintergrund. Vertrautheit ist ein weiterer wichtiger Einfluss, wobei Übervertrautheit dazu führt, dass man die Musik nicht mag.
+					</br>
+					Letztendlich präferieren Hörer fröhliche über traurige Musik, wobei sie sich häufig aktiv dazu entscheiden, traurige Musik zu hören, vor allem, wenn sie bereits traurig oder müde sind.
+				</article>
             </section>
 			<section data-linear="3">
 				<h1>Audiovisuelle Anwendung</h1>
 
                 <article>
-                    <h2>DER WEISSE HAI</h2>
+                    <h2>Der weiße Hai</h2>
 
-					<audio loop id="a4">
-						<source src="src/data/audio/gefahr.mp3" type="audio/mpeg">
+					<audio loop id="videoAudio1">
+						<source src="src/data/audio/wh_gefahr.mp3" type="audio/mpeg">
 					</audio>
-					<audio loop id="a5">
-						<source src="src/data/audio/romantisch.mp3" type="audio/mpeg">
+					<audio loop id="videoAudio2">
+						<source src="src/data/audio/wh_romantisch.mp3" type="audio/mpeg">
 					</audio>
 
 					<div class="row">
 						<div class="col-md-12"> 
-							<video loop id="video" muted>
-							  <source src="http://videos.cdn.moviepilot.de/20141101/1764/1_ghfg353w_1_jbyes9md_1.mp4" type="video/mp4">
+							<video loop id="video1" muted>
+							  <source src="src/data/video/Wh_video_264.mp4" type="video/mp4">
 							</video>
 						</div>
 					</div>
 
                     <br>
 					<div class="row" style="padding-left: 14px;">
-						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('4')" id="btn4">
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio1', 'video1')" id="btn4">
 							Gefahr
 						</div>
-						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('5')" id="btn5">
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio2' , 'video1')" id="btn5">
 							Romantisch
 						</div>
 					</div>
 			
                 </article>
+				
+				 <article>
+                    <h2>Rocky</h2>
+
+					<audio loop id="videoAudio3">
+						<source src="src/data/audio/rocky_motivierender.mp3" type="audio/mpeg">
+					</audio>
+					<audio loop id="videoAudio4">
+						<source src="src/data/audio/rocky_laecherlich.mp3" type="audio/mpeg">
+					</audio>
+
+					<div class="row">
+						<div class="col-md-12"> 
+							<video loop id="video2" muted>
+							  <source src="src/data/video/rocky_video_264.mp4" type='video/mp4' >
+							</video>
+						</div>
+					</div>
+
+                    <br>
+					<div class="row" style="padding-left: 14px;">
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio3', 'video2')" id="btn6">
+							Motivierend
+						</div>
+						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio4', 'video2')" id="btn6">
+							Lächerlich
+						</div>
+					</div>
+			
+                </article>
+				
 			</section>
         </div>
     </div>
