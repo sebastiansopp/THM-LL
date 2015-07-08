@@ -30,75 +30,76 @@
 </head>
 
 <style>
-
-.walkingButton{display:none !important;}
-body{font-family: arials;}
-
+ul.nav a:hover{background-color: #FFFFFF !important;}
+.navbar-default .navbar-nav>li>a { color: black;}
+.walkingButton{display:block !important;}
+body{font-family: arials; }
+.well{ background-image: linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); border-color:#C1C1C1}
+.navbar-default{background-image:linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%);border-color:#C1C1C1; color:black;}
+ul.nav{color:black;}
+.btn-primary {
+color:#fff ; 
+text-shadow: none;
+    background-image: linear-gradient(to bottom, #42606A 0px, #AFBCB5 100%);
+    background-repeat: repeat-x;
+    border-color: #AFBCB5;}
+.btn-primary:hover, .btn-primary:focus {
+color:#333 ;
+    background-color: #AFBCB5;
+    background-position: 0px -15px;
+	border-color: #AFBCB5;
+}
+.btn-default {
+color:#fff ;
+text-shadow: none;
+    background-image: linear-gradient(to bottom, #42606A 0px, #AFBCB5 100%);
+    background-repeat: repeat-x;
+    border-color: #AFBCB5;}
+.btn-default:hover, .btn-primary:focus {
+    background-color: #AFBCB5;
+    background-position: 0px -15px;
+	border-color: #AFBCB5;
+}
 </style>
 
 
-<body background="src/data/image/bgr_pattern.png">
+<body style="background-image: url(src/data/image/bgr2.jpg);background-position: 0px -65px;">
 
 <div class="container">
     <nav class="mainNavigation"></nav>
     <div class="row">
-	
-        <div class="col-md-9 col-xs-9">
-            <section data-linear="1">
-                <h1>Musik Grundlagen</h1> 
+		
+        <div class="col-md-12 col-xs-12">
+            <section class="well">
+                <h1>Emotionen</h1> 
                 <article>
-                   <h2>Grundlagen</h2>
-                   <div class="module accordion" >
-                    <p data-title="Rahmen erschaffen">
-						Am Beginn jeder Komposition stehen die Kadenzen – 
-						die Abfolge der Grundakkorde die das Lied ausmachen sollen.
-						Die klassische Harmonielehre bietet vielfältige Möglichkeiten von Abfolgen,
-						derer man sich bedienen kann. Einfache Kadenzabfolgen können durch weitere Möglichkeiten 
-						der Harmonielehre erweitert und ausgebaut werden. 
-						</br></br>
-						Quintenzirkel</br>
-						Intervalle</br>
-						Kirchentonleitern</br>
-						Grundtonarten/Kadenzen (Tonika, Subdominante, Dominante etc.)
-						</br>
-						</br>
-						Quintfolge</br>
-						</br>
-						Tonartwechsel</br>
-						</br>
-						Substitution</br>
-						</br>
-						Transposition
-					<p data-title="Rhythmik und Dynamik"> Rhythmik</br>
-						(Drumset, Percussion, Zusammenspiel Sets)
-						</br></br>
-						Dynamik Instrumental
-						</br></br>
-						Streicher (Pizz., Stacc.,)</br>
-						Saiten (Anschlagsmögl.)</br>
-						Gegenbewegungen</br>
-					<p data-title="Stimmungserzeugung">  Instrumentalisierung allgemein
-					</br>
-						Wirkungsgrundlage (kl. Instrum.kunde)</br>
-						Gegenbewegung</br>
-						Kompositionsgrundlagen (Quint/Oktavparallelen, Wichtigkeit von 7,9 und 11, Vermeidungshinweise, Tritonussubst. Etc.)
-					<p data-title="Thematik">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                        </div>
+                   <h2>Was sind Emotionen</h2>
                 </article>
-				<article>
-                   <h2>Erweitert</h2>
-                   <div class="module accordion" >
-                    <p data-title="Rahmen erschaffen">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                    <p data-title="Rhythmik und Dynamik">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-					<p data-title="Stimmungserzeugung">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-					<p data-title="Thematik">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                        </div>
+				  <article>
+                   <h2>Was machen Emotionen mit uns</h2>
+				    <div class="module accordion" >
+						<p data-title="Subjektive Gefühle">...</p>
+						<p data-title="Ausdrucksverhalten">...</p>
+						<p data-title="Physiologische Reaktion">...</p>
+					</div>
+                </article>
+				 <article>
+                   <h2>Wie entstehen Emotionen</h2>
                 </article>
 			</section>
-			<section data-linear="2">
-                <h1>Musik Interaktion</h1> 
+			 <section class="well">
+                <h1>Musik und Emotionen</h1> 	
 				<article>
-                   <h2>Rhythmik und Dynamik</h2>
+                   <h2>Musik in der Wissenschaft</h2>
+                </article>
+				<article>
+                   <h2>Musik als Auslöser für Emotionen</h2>
+                </article>
+				<article>
+                   <h2>Messung von Emotionen</h2>
+                </article>
+				<article>
+                   <h2>Musik interaktiv erleben</h2>
                    <div class="module" >
 				  <audio loop id="audio1">
 						<source src="src/data/audio/bsp1Piano.mp3" type="audio/mpeg">
@@ -166,7 +167,7 @@ body{font-family: arials;}
                 </article>  
 
 				<article>
-					<h2>Musik und Emotionen</h2>
+					<h2>?Text von Jan?</h2>
 					Man ist sich einig, dass sich Musik lustig oder traurig anhört, ob dies Emotionen aber auch tatsächlich auslöst, ist umstritten. Und selbst unter denen, die es bejahen, wird diskutiert, welcher Art diese Emotionen sind. (Schellenberg & Hunter, 2010)
 					</br>
 					Man unterscheidet zwei Vertreter der Emotionsforschung:
@@ -224,10 +225,155 @@ body{font-family: arials;}
 					</br>
 					Letztendlich präferieren Hörer fröhliche über traurige Musik, wobei sie sich häufig aktiv dazu entscheiden, traurige Musik zu hören, vor allem, wenn sie bereits traurig oder müde sind.
 				</article>
-            </section>
-			<section data-linear="3">
+            </section>		
+			
+			 <section class="well">
+			<h1>Musik</h1>
+				<article>
+                   <h2>Grundlagen</h2>
+				   <div class="module accordion" >
+						<p data-title="Musiktheoretische Grundlagen">	  
+						   Um den Ausführungen der Strebetendenz-Theorie folgen zu können, welche den Zusammenhang zwischen Musik und Emotionen erklären sollen, sind ein paar
+						   musiktheoretische Grundlagen erforderlich.</br> Vor allem ist es wichtig die Substanz bestimmter Harmonien zu verstehen, die im Folgenden erläutert werden.
+						   </br>Alle Kadenzen – bestimmte Abfolgen von Akkorden – können auf verschiedenen Tonleitern, auch benannt als Skalen, begonnen werden und entwickeln so ihren
+						   eigenen Klang.</br> Und um diese bestimmten Klänge und was sie in uns auslösen und warum soll es bei den weiteren Kapiteln gehen. 
+						</p>
+						<p data-title="Die Kirchentonleitern (Modi)">
+							Die Kirchentonleitern haben einen sehr hohen Stellenwert in der Musiktheorie. Auf ihnen bauen sich die Grundtonarten auf, die in 
+							unserer westlichen Musik Anwendung finden. Bevor ich auf den Aufbau der Kirchentonleitern eingehe, möchte ich ein paar Begriffe vorab klären. 
+							</br></br>Ein <b>Intervall</b> bezeichnet den Abstand zweier Töne zueinander. Geht man die Intervalle von einem bleibenden Grundton aus durch, trägt 
+							jeder Halbton aufwärts des Grundtons eine feste Bezeichnung. Auch hier ist es irrelevant, von welchem Ton aus man startet. 
+							</br><img src="src/data/image/1.jpg" style="width: 53%;"/></br></br>
+							Eine <b>Skala</b> oder <b>Tonleiter</b> besteht aus einer bestimmten, festgelegten Abfolge von Halb- und Ganztönen,  unabhängig davon,
+							von welchem Ton aus man startet. Eine Darstellung der Skalen folgt weiter unten. Jeder folgende Tonschritt vom Grundton aus gesehen
+							wird auch als Stufe bezeichnet. Betrachten wir als Beispiel die C-Dur Tonleiter (Ionisch).
+							</br><img src="src/data/image/2.gif" /></br></br>
+							Eine <b>Kadenz</b> bezeichnet – knapp formuliert - eine bestimmte Abfolge von Akkorden bezogen auf eine Grundtonart. Die wichtigsten  Stufen einer
+							Kadenz sind hierbei 
+							die I. Stufe (T -Tonika), die IV. Stufe (S - Subdominante) und die V. Stufe (D - Dominante). Eine Kadenz bestehend aus diesen Akkorden ist zur Verdeutlichung dargestellt. 
+							</br><img src="src/data/image/3.jpg" /></br>	</br>
+							Die <b>Kirchentonleitern</b> werden aus den Grundtönen der C-Dur Tonleiter abgeleitet, wie in der Abbildung gezeigt wird. Jede Tonleiter bildet sich aus einer 
+							bestimmten Abfolge aus Halbtönen und Ganztönen. Dies lässt sich anhand einer Klaviatur am besten sehen. 						
+							</br><img src="src/data/image/4.png" style="width: 20%;"/></br>	</br>
+							Ein Halbton ist immer die nächstliegende Taste der Klaviatur  – ein Ganzton sind demnach zwei Halbtöne. Die C-Dur-Tonleiter wird nur auf den weißen Tasten gespielt – 
+							so bildet sich die Ionische Tonleiter. </br></br>
+							<b>GT – GT – HT – GT – GT – GT – HT</b></br></br>
+							Möchte man nun eine andere Tonleiter verwenden, nehmen wir als Beispiel die Dorische, startet man von D und schaut sich an, wo die Halbtöne liegen, wenn man
+							von D beginnend die weißen Tasten hinauf wandert. So würde sich ergeben:</br></br>
+							<b>GT – HT – GT – GT – GT – HT - GT </b></br></br>
+							</br><img src="src/data/image/5.jpg" style=" width: 53%;" /></br>	</br>
+							Bildet man nun die Dreiklänge über die einzelnen Töne einer bestimmten Skala, ergibt sich ein charakteristisches Klangbild einer jeden Skala. Manche dieser Klangbilder 
+							sind Moll-orientiert (Dorisch, phrygisch, äolisch) und manche sind Dur-orientiert (ionisch, lydisch, mixolydisch). Bildet man, wie im Beispiel der Kadenz angegeben wurde,
+							eine Tonika – Subdominante – Dominante – Tonika Verbindung, so wird sich dieser Klang auf verschiedene Skalen bezogen
+							gänzlich anders anhören und in uns andere Gefühle und Emotionen wecken. 
+						</p>
+					</div> 
+                </article>
+				<article>
+                   <h2>Strebetendenz-Theorie</h2>
+				      <div class="module accordion" >
+						<p data-title="Grundlagen">Die Strebetendenz-Theorie beschäftigt sich mit der Wirkung von bestimmten Harmonien und Akkordfolgen auf 
+							die Emotion des Menschen. Woran liegt es, dass manche Musikstücke uns fröhlich stimmen, andere traurig und wiederrum andere uns motivieren? Was
+							passiert mit unserer Wahrnehmung und was nehmen wir überhaupt wahr und wieso verleitet es uns dazu, eine Emotion diesbezüglich aufzubauen.</br> Ernst 
+							Kurth entwickelte erstmals eine Vorversion der Strebetendenz-Theorie in seiner Diplomarbeit 1987 mit dem Titel „Das musikalische Raumphänomen.“ 
+							Erst später entwickelte er daraus die Strebetendenz-Theorie, welche er wie folgt beschrieb: „Die Wahrnehmung harmonischer Abläufe als Identifikationen
+							des Hörers mit Willensvorgängen, die der Strebewirkung entgegen gerichtet sind.“ Bernd Willimek, welcher hier auch zitiert und als Grundlage genommen 
+							werden soll, entwickelte diese Theorie der musikpsychologischen Lehre Ernst Kurths weiter. Sie enthält die weltweit erste Auflistung emotionaler 
+							Charaktere in Bezug auf Musik. </br></br>
+							Doch was drückt diese komplexe Beschreibung der Theorie Ernst Kurths nun aus?</br> Grundsätzlich geht es um den Bezug zweier Töne – oder später ausgebaut
+							in Akkorde – zueinander. Bevor ich auf den musikalischen Bezug eingehen werde, möchte ich ein physikalisches Beispiel bringen, um das Verständnis 
+							des Strebens, von dem hier die Rede ist, näher zu erläutern. Ein Ton wird hier dargestellt, als ein Auto, welches auf einem Hügel  steht und abwärts
+							gerichtet ist und im Sinne der Schwerkraft hinab rollen würde. Die Person im Wagen, die dem bewusst werden würde, wird nun versuchen mittels 
+							Handbremse diesen Vorgang aufzuhalten – oder zuzulassen.</br> Es ist also eine Willensentscheidung sich für oder gegen ein Entgegenstreben zu 
+							entscheiden. Unser Bewusstsein empfindet manche Tonverbindungen als grundlegend angenehm – unabhängig von ethnischer Herkunft und andere 
+							wiederum nicht. Dieses Entgegenstreben wird im musikalischen Sinne ebenso verstanden wie in dem physikalischen Beispiel: Unbewusst strebt
+							unser Wille nach einer angenehm empfundenen Verbindung und wird diese nicht erreicht empfinden wir – ebenfalls unbewusst – ein Gefühl der
+							Spannung und einer Willensregung diesen Zustand zu ändern.</br> Ein Ton kann sich selbst nicht entscheiden sich in einen anderen umzuwandeln,
+							das Gefühl des Hörers vermittelt ihm das Gefühl, als „wolle“ ein Ton sich in einen anderen auflösen um die Spannung zu lösen.
+							So entsteht der Wunsch sich für einen rein empfundenen Klang zu entscheiden und gegen eine Dissonanz. Dies ist ein Wechselspiel
+							unbewusster und bewusster Wahrnehmung, wie Willimek beschreibt. Sekundintervalle werden im Allgemeinen als dissonant eingeschätzt
+							– die Sekundreibung wird innerhalb eines Stücks unbewusst wegen ihrer Dissonanz als Störung empfunden und der Wunsch diese Dissonanz
+							zu bereinigen verkehrt sich ins Gegenteil und der Hörer identifiziert sich damit den Reibungston weiter zu hören. Ähnliche Umkehrungen
+							ins Gegenteil sind bspw. im Rahmen der Klinischen Psychologie bei zwangserkrankten Patienten zu finden. Der Zwang wird als unbewusster
+							Wunsch gesehen – bewusst macht sich der Patient jedoch nur mit dem Willen, dem Zwang zu widerstehen. </br></br>
+							Auf Basis dieser Grundkenntnis – der willentlichen Strebewirkung entgegen einer als angenehm empfundenen Kadenz oder Harmoniefolge
+							– bauen sich alle Charaktere der Strebetendenz-Theorie auf. Analysiert wurden die emotionalen Charaktere der Harmonien, welche in 
+							den Grundlagen der Musiktheorie beschrieben wurden. Da es den Umfang sprengen würde sich mit jeder Einzelnen der Charaktere zu befassen, 
+							wird es ein Beispiel geben, sowie eine Auflistung der emotionalen Charaktere mit Klangbeispielen. Belegt wurden diese in den Testreihen,
+							die mit Probanden N = 2000 aus Europa, Asien, Australien und Südamerika durchgeführt wurden, um eine interkulturelle Stichprobe zu bekommen. </p>
+						<p data-title="Emotionale Charaktere im Überblick">Hier folgt nun eine Auflistung der emotionalen Charaktere mit Klangbeispielen,
+							um dies zu verdeutlichen. Es bleibt einem selbst überlassen die musikalischen Beispiele selbst zu interpretieren und die zugewiesene
+							Charaktereigenschaft zu erkennen. </br></br>
+							<b>Äolisches Moll:</b> Mut, Abenteuer, Spannung, Gefahr, Härte, schwierige Situation</br>
+							<b>Musikbsp:</b> Vorspann Tatort (Klaus Doldinger)</br></br>
+							<b>Dominante/ Dominantwechsel:</b> Bewegung, Streben, Befreiung</br>
+							<b>Klangbsp:</b> Das Wandern ist des Müllers Lust</br></br>
+							<b>Septakkord:</b> Widerstand, Protest, Aufmüpfigkeit</br>
+							<b>Klangbsp: </b>Why don’t we do it in the Road (Beatles)</br></br>
+							<b>Septakkord gr. Septime:</b> Wehmut, Weichlichkeit, Abschied</br>
+							<b>Klangbsp:</b> Elton John – Your Song</br></br>
+							<b>Subdominante in Dur:</b> Gelöstheit, Überschwang, Freude, Trunkenheit, Sieg, Feierlichkeit</br>
+							<b>Klangbsp:</b> Nationalhymne</br></br>
+							<b>Verminderter Septakkord: </b>Schrecken, Verzweiflung, Panik, Entsetzen, Schwermut</br>
+							<b>Klangbsp:</b> Bittendes Kind (Schumann)</br></br>
+							<b>Kleine Sexte:</b> Bedrohung, Gefahr, Angst, Beklemmung</br>
+						</p>
+						<p data-title="Die Testreihen">Ziel der Testreihen war es, nachzuweisen, dass Musik nicht rein subjektiv bewertet wird wie 
+							angenommen bislang, sondern einen systematischen Charakter hat, der bei diesen Tests erfasst und mit bestimmten harmonischen
+							Abläufen nachgewiesen werden soll. </br>Beide Tests überschneiden sich mit den behandelten Harmonien und tragen so zur gegenseitigen
+							Bestätigung bei. Bei der Entwicklung der Testreihen wurde intensiv Musikliteratur studiert quer durch die Epochen und Befragungen
+							mit Erwachsenen und Kindern durchgeführt. So entstanden zwei unterschiedliche Tests, der Basis Test und der Rocky Test, welche sich
+							gegenseitig stützten. </p>					
+						<p data-title="Der Basis-Test">Der Basistest wurde als Präferenztest konzipiert, in welchem die Probanden musikalische Sequenzen mit 
+							Emotionen verbinden sollten. Hierzu wurden ihnen kurze Stücke am Klavier vorgespielt, welche lediglich die klanglichen Grundeigenschaften
+							präsentierten (Lautstärke, Tempo, Harmonien). Diese sollten sie zu in mit Begriffen dargestellten Filmszenen zuordnen. Bspw. Verzweiflung,
+							Wandern, Einsamkeit, magische Verwandlung und Sommertraum. </br> Der Basis-Test erfasst zudem die Parameter Alter, Geschlecht und musikalische 
+							Betätigung der Probanden.
+							Der Basis-Test ergab eine Trefferquote von 92,17% bei der Auswahl der Harmonien im Sinne der Strebetendenz-Theorie. Zu bemerken wäre jedoch, 
+							dass es sich hierbei 
+							um eine Stichprobe von N = 23 handelt und demnach weitergehend überprüft werden muss, was später noch erfolgte. Leider liegen hierfür noch 
+							keine verwendbaren Datensätze vor.</p>					
+						<p data-title="Der Rocky-Test">Auf Grundlage der im Basis-Test angenommenen Theorie, dass musikalische Harmonien auf emotionaler Ebene gleich 
+							wahrgenommen werden, wurde der Rocky-Test entworfen. Bei diesem Test wurden den Probanden auf CD emotionale Szenen aus einem Märchen vorgespielt,
+							jeweils mit verschiedener musikalischer Untermalung.</br> Aufgabe des Probanden war es nun, die passendste Version zu wählen, wo die Szene zur
+							musikalischen Untermalung passt – frei nach eigenem Empfinden. Die musikalischen Unterlegungen wurden nach den Richtlinien der 
+							Strebetendenz-Theorie sorgfältig ausgewählt.
+							Die Ergebnisse zeigen, dass sich 86,69% der Probanden für die in der Strebetendenz-Theorie als korrelierte Harmonien zu bestimmten Emotionen nachgewiesenen
+							 musikalischen Szenen entschieden haben. Ausgewertet wurde nach verschiedenen Szenen, erfasst wurde wie zuvor Alter, Geschlecht und musikalische Betätigung.
+							</br> Mit einer Stichprobe von N = 2016 ist dies eine bessere Repräsentation, als der Basis-Test. Es zeigte sich, dass Probanden mit musikalischer Vorbildung eine
+							 höhere Trefferquote aufwiesen (88,1%) als Probanden ohne musikalische Vorbildung (82,95%), doch der quantitative Unterschied zu gering ist, um dies mit
+							 musikalischer Vorbildung zu erklären. 
+							Dies kann heißen, dass die Strebetendenz-Theorie einen Hinweis auf den Zusammenhang zwischen Emotionen und Harmonien geben kann, der in der Wissenschaft 
+							noch nicht ausreichend erklärbar ist. Um eine valide Aussage treffen zu können, wäre aber noch weitere Forschung nötig, sowie die Erweiterung der Stichprobe. </p>					
+						</div>
+                </article>
+				
+			
+			
+				<article>
+				<h2>?Multiple Choice?</h2>
+				<div class="module multiple-choice"
+				data-question="asked quetion">
+				<p data-correct="1"> answer 1</p>
+				<p data-correct="0"> answer n</p>
+				</div>
+				<div class="module multiple-choice"
+				data-question="asked quetion">
+				<p data-correct="1"> answer 1</p>
+				<p data-correct="0"> answer n</p>
+				</div>
+				</article>
+				
+				<article>
+				<h2>?Ergebnis?</h2>
+				
+				</article>
+			</section>
+			
+			 <section class="well">
 				<h1>Audiovisuelle Anwendung</h1>
                 <article>
+				
                     <h2>Der weiße Hai</h2>
 					<audio loop id="videoAudio1">
 						<source src="src/data/audio/wh_gefahr.mp3" type="audio/mpeg">
@@ -235,25 +381,34 @@ body{font-family: arials;}
 					<audio loop id="videoAudio2">
 						<source src="src/data/audio/wh_romantisch.mp3" type="audio/mpeg">
 					</audio>
+					
 					<div class="row">
-						<div class="col-md-12"> 
-							<video loop id="video1" muted>
-							  <source src="src/data/video/Wh_video_264.mp4" type="video/mp4">
-							</video>
+					
+						<div class="row">
+							<div class="col-md-6"> 
+								<video loop id="video1" muted>
+								  <source src="src/data/video/Wh_video_264.mp4" type="video/mp4">
+								</video>
+							</div>
 						</div>
-					</div>
-                    <br>
-					<div class="row" style="padding-left: 14px;">
-						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio1', 'video1')" id="btn4">
-							Gefahr
-						</div>
-						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio2' , 'video1')" id="btn5">
-							Romantisch
+						<div class="row" style="padding-left: 14px;">
+							<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio1', 'video1')" id="btn4">
+								Gefahr
+							</div>
+							<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio2' , 'video1')" id="btn5">
+								Romantisch
+							</div>
+
 						</div>
 					</div>
                 </article>
 				<article>
+			
                     <h2>Rocky</h2>
+					
+					<div id="locked1"> Bitte schließe das erste Quiz ab, um dieses Video freizuschalten </div>
+					
+						<div id="v1" style="visibility:hidden">
 					<audio loop id="videoAudio3">
 						<source src="src/data/audio/rocky_motivierender.mp3" type="audio/mpeg">
 					</audio>
@@ -261,13 +416,12 @@ body{font-family: arials;}
 						<source src="src/data/audio/rocky_laecherlich.mp3" type="audio/mpeg">
 					</audio>
 					<div class="row">
-						<div class="col-md-12"> 
+						<div class="col-md-6"> 
 							<video loop id="video2" muted>
 							  <source src="src/data/video/rocky_video_264.mp4" type='video/mp4' >
 							</video>
 						</div>
 					</div>
-                    <br>
 					<div class="row" style="padding-left: 14px;">
 						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio3', 'video2')" id="btn6">
 							Motivierend
@@ -276,9 +430,14 @@ body{font-family: arials;}
 							Lächerlich
 						</div>
 					</div>
+					</div>
                 </article>
 				 <article>
+			
                     <h2>Psycho</h2>
+										<div id="locked2"> Bitte schließe das zweite Quiz ab, um dieses Video freizuschalten </div>
+
+						 <div id="v2" style="visibility:hidden">
 					<audio loop id="videoAudio5">
 						<source src="src/data/audio/psychoerotisch.mp3" type="audio/mpeg">
 					</audio>
@@ -286,13 +445,12 @@ body{font-family: arials;}
 						<source src="src/data/audio/psychohorror.mp3" type="audio/mpeg">
 					</audio>
 					<div class="row">
-						<div class="col-md-12"> 
+						<div class="col-md-6"> 
 							<video loop id="video3" muted style="width:600px">
 							  <source src="src/data/video/psychovideo.mp4" type='video/mp4' >
 							</video>
 						</div>
 					</div>
-                    <br>
 					<div class="row" style="padding-left: 14px;">
 						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio5', 'video3')" id="btn6">
 							Erotisch
@@ -301,9 +459,14 @@ body{font-family: arials;}
 							Unheimlich
 						</div>
 					</div>
+					</div>
                 </article>
 				<article>
+				
                     <h2>Der Soldat James Ryan</h2>
+										<div id="locked3"> Bitte schließe das dritte Quiz ab, um dieses Video freizuschalten </div>
+
+					<div id="v3" style="visibility:hidden">
 					<audio loop id="videoAudio7">
 						<source src="src/data/audio/ryanheavy.mp3" type="audio/mpeg">
 					</audio>
@@ -311,13 +474,12 @@ body{font-family: arials;}
 						<source src="src/data/audio/ryantraurig.mp3" type="audio/mpeg">
 					</audio>
 					<div class="row">
-						<div class="col-md-12"> 
+						<div class="col-md-6"> 
 							<video loop id="video4" muted>
 							  <source src="src/data/video/ryanvideoSOFTER.mp4" type='video/mp4' >
 							</video>
 						</div>
 					</div>
-                    <br>
 					<div class="row" style="padding-left: 14px;">
 						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio7', 'video4')" id="btn6">
 							Energisch
@@ -325,6 +487,7 @@ body{font-family: arials;}
 						<div class="col-md-2 btn btn-default" style="margin-right:10px; margin-bottom:10px" onclick="playVideoSounds('videoAudio8', 'video4')" id="btn6">
 							Traurig
 						</div>
+					</div>
 					</div>
                 </article>
 			</section>

@@ -406,7 +406,8 @@ App.SectionManager = {
         var parentSection = this.sections[thisArticle.parentSection];
 
         var arg, canProceed = true;
-
+		var valid = false;
+		
         if(!this.firstRun){
             
             if(this.currentSection === parentSection.id){
@@ -416,12 +417,16 @@ App.SectionManager = {
                     if(currentModule.isValidator && !currentModule.finished){
                         validatorResult = currentModule.validate(currentModule)
                         canProceed = canProceed && validatorResult;
-
+						valid = true;
                         currentModule.finished = validatorResult;
                     } else {
                         canProceed = canProceed && true;
                     }
                 }
+				if(canProceed&&valid){
+					unlockVideo();
+					valid = false;
+				}
             }
 
             if(!canProceed && this.currentSection === parentSection.id){

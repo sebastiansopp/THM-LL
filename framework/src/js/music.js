@@ -2,10 +2,15 @@
 			var COUNTAUDIOFILES = 4;
 			var COUNTVIDEOAUDIOFILES = 8;
 			var COUNTVIDEOFILES = 4;
+			var VIDEOSUNLOCKED = 0;
 
 			window.onload = function () {
 				for(var i = 1; i <= COUNTAUDIOFILES; i++){
-					document.getElementById('audio'+i).muted = true;     
+					document.getElementById('audio'+i).muted = true;    
+				}
+				VIDEOSUNLOCKED = localStorage.getItem("unlocked");	
+				for(var i = 1; i <= VIDEOSUNLOCKED; i++){
+					videoSetVisible(i);
 				}
 			};
 			
@@ -65,15 +70,50 @@
 					document.getElementById('btn'+id).className = "col-md-1 on";     
 					document.getElementById('audio'+id).muted = false; 
 					document.getElementById('xBtn'+id).style.visibility = "hidden";
-					document.getElementById('text'+id).style.visibility = "visible";
+					//document.getElementById('text'+id).style.visibility = "visible";
 							
 				}else{                                                     
 					document.getElementById('btn'+id).className = "col-md-1 off";     
 					document.getElementById('audio'+id).muted = true;  
 					document.getElementById('xBtn'+id).style.visibility = "visible";
-					document.getElementById('text'+id).style.visibility = "hidden";					
+					//document.getElementById('text'+id).style.visibility = "hidden";					
 				}                                                                                 
-			}                                                                                     
+			}           
+
+			function videoSetVisible(i){
+				document.getElementById("v"+i).style.visibility= "visible";
+				document.getElementById("locked"+i).style.visibility= "hidden";
+			}
+			
+			function unlockVideo(){
+				if(VIDEOSUNLOCKED<=2)
+				{
+					VIDEOSUNLOCKED++;
+					localStorage.setItem("unlocked", VIDEOSUNLOCKED);
+					videoSetVisible(VIDEOSUNLOCKED);
+				}
+			}
 		
-
-
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
