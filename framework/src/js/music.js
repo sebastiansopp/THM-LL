@@ -4,6 +4,9 @@
 			var COUNTVIDEOFILES = 4;
 			var VIDEOSUNLOCKED = 0;
 
+
+			var playMusicBeispiel1 = false;
+
 			window.onload = function () {
 				for(var i = 1; i <= COUNTAUDIOFILES; i++){
 					document.getElementById('audio'+i).muted = true;    
@@ -17,6 +20,8 @@
 			window.onhashchange = function(){
 				stop();
 				stopAllVideos();
+				document.getElementById("musicInteractive1_btn").innerHTML = "Abspielen";
+				playMusicBeispiel1 = false;
 			}
    
 			function play(objects){
@@ -91,6 +96,19 @@
 					VIDEOSUNLOCKED++;
 					localStorage.setItem("unlocked", VIDEOSUNLOCKED);
 					videoSetVisible(VIDEOSUNLOCKED);
+				}
+			}
+
+			function musicInteractive1(){
+				if (playMusicBeispiel1 == false) {
+					play(["audio1", "audio2", "audio3", "audio4"]);
+					playMusicBeispiel1 = true;
+					document.getElementById("musicInteractive1_btn").innerHTML = "Pause";
+				}else {
+					pause(["audio1", "audio2", "audio3", "audio4"]);
+					playMusicBeispiel1 = false;
+					document.getElementById("musicInteractive1_btn").innerHTML = "Abspielen";
+
 				}
 			}
 		

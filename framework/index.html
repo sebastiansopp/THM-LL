@@ -132,53 +132,39 @@ text-shadow: none;
 					</audio> 
 					</br></br>
 
+
 					<div class="row">
-						<div class="col-md-12">
-							<div class="row"> 
-								<div class="col-md-1 off" onclick="switchAudio('1')" id="btn1" style="margin-bottom:10px; cursor:pointer;">
-									<img src="src\data\image\icons/klavier_icon_an.jpg" style="width: 70px;" />
-									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn1"/>
+						<div class="col-md-12 col-sm-2 text-center center-block">
+
+								<div onclick="switchAudio('1')" id="btn1" style="width: 25%; margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/klavier_icon_an.jpg" style="width: 140px;" />
+									<img src="src\data\image\icons/aus.png" style="width: 140px; position:relative; margin-top:-120px;" id="xBtn1"/>
 								</div>
-								<div class="col-md-2" style="margin-top: 13px;"> Klavier </div>
-								<div class="col-md-9 invisible" id="text1"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-							</div>
-							</div>
-							<div class="row"> 
-								<div class="col-md-1 off" onclick="switchAudio('2')" id="btn2" style="margin-bottom:10px; cursor:pointer;">
-									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 70px;" />      
-									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn2"/>
-								</div>  
-								<div class="col-md-2"  style="margin-top: 13px;"> Streicher </div>
-								<div class="col-md-9 invisible" id="text2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+
+
+								<div  onclick="switchAudio('2')" id="btn2" style="width: 25%; margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 140px;" />
+									<img src="src\data\image\icons/aus.png" style="width: 140px; position:relative; margin-top:-120px;" id="xBtn2"/>
 								</div>
-							</div>
-							<div class="row"> 
-								<div class="col-md-1 off"  onclick="switchAudio('3')" id="btn3" style="margin-bottom:10px; cursor:pointer;">
-									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 70px;" />
-									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn3"/>
+
+								<div  onclick="switchAudio('3')" id="btn3" style="width: 25%; margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 140px;" />
+									<img src="src\data\image\icons/aus.png" style="width: 140px; position:relative; margin-top:-120px;" id="xBtn3"/>
 								</div>
-								<div class="col-md-2" style="margin-top: 13px;"> Streicher </div>
-								<div class="col-md-9 invisible" id="text3"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-								</div>
-							</div>
 							<!-- Hier noch eine Audiospur einfügen -->
-							<div class="row"> 
-								<div class="col-md-1 off"  onclick="switchAudio('4')" id="btn4" style="margin-bottom:10px; cursor:pointer;">
-									<img src="src\data\image\icons/drums_icon_an.jpg" style="width: 70px;" />
-									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn4"/>
+								<div  onclick="switchAudio('4')" id="btn4" style="width: 25%; margin-bottom:10px; cursor:pointer;">
+									<img src="src\data\image\icons/drums_icon_an.jpg" style="width: 140px;" />
+									<img src="src\data\image\icons/aus.png" style="width: 140px; position:relative; margin-top:-120px;" id="xBtn4"/>
 								</div>
-								
-								<div class="col-md-2"  style="margin-top: 13px;"> Schlagzeug </div>
-								<div class="col-md-9 invisible" id="text4"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-							</div>
-							</div>
+
+						</div>
+						<br>
+						<div class="col-md-12 col-sm-2 text-center center-block" style="margin-top:20px">
+							<div id="musicInteractive1_btn" class="btn btn-default" onclick='musicInteractive1()'> Abspielen </div>
 						</div>
 					</div>
-					<!-- Nice to Have: Visualisierung der Audiospur -->
-					<div style="margin-top:20px">
-						<div class="btn btn-info" onclick='play(["audio1","audio2","audio3","audio4"]);'> Play </div>
-						<div class="btn btn-info" onclick='pause(["audio1","audio2","audio3","audio4"]);'> Pause </div>
-					</div>
+
+
 					
                    </div>
                 </article>  
@@ -194,15 +180,15 @@ text-shadow: none;
 					</audio> </br>
 					<audio loop id="audio3">
 						<source src="src/data/audio/bsp1Streicherruhig.mp3" type="audio/mpeg">
-					</audio> 
+					</audio>
 					<audio loop id="audio4">
 						<source src="src/data/audio/bsp1Drums.mp3" type="audio/mpeg">
-					</audio> 
+					</audio>
 					</br></br>
 
 					<div class="row">
 						<div class="col-md-12">
-							<div class="row"> 
+							<div class="row">
 								<div class="col-md-1 off" onclick="switchAudio('1')" id="btn1" style="margin-bottom:10px; cursor:pointer;">
 									<img src="src\data\image\icons/klavier_icon_an.jpg" style="width: 70px;" />
 									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn1"/>
@@ -211,16 +197,16 @@ text-shadow: none;
 								<div class="col-md-9 invisible" id="text1"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 							</div>
 							</div>
-							<div class="row"> 
+							<div class="row">
 								<div class="col-md-1 off" onclick="switchAudio('2')" id="btn2" style="margin-bottom:10px; cursor:pointer;">
-									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 70px;" />      
+									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 70px;" />
 									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn2"/>
-								</div>  
+								</div>
 								<div class="col-md-2"  style="margin-top: 13px;"> Streicher </div>
 								<div class="col-md-9 invisible" id="text2">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 								</div>
 							</div>
-							<div class="row"> 
+							<div class="row">
 								<div class="col-md-1 off"  onclick="switchAudio('3')" id="btn3" style="margin-bottom:10px; cursor:pointer;">
 									<img src="src\data\image\icons/streicher_icon_an.jpg" style="width: 70px;" />
 									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn3"/>
@@ -230,12 +216,12 @@ text-shadow: none;
 								</div>
 							</div>
 							<!-- Hier noch eine Audiospur einfügen -->
-							<div class="row"> 
+							<div class="row">
 								<div class="col-md-1 off"  onclick="switchAudio('4')" id="btn4" style="margin-bottom:10px; cursor:pointer;">
 									<img src="src\data\image\icons/drums_icon_an.jpg" style="width: 70px;" />
 									<img src="src\data\image\icons/aus.png" style="width: 70px; position:relative; margin-top:-70px;" id="xBtn4"/>
 								</div>
-								
+
 								<div class="col-md-2"  style="margin-top: 13px;"> Schlagzeug </div>
 								<div class="col-md-9 invisible" id="text4"> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 							</div>
@@ -247,7 +233,7 @@ text-shadow: none;
 						<div class="btn btn-info" onclick='play(["audio1","audio2","audio3","audio4"]);'> Play </div>
 						<div class="btn btn-info" onclick='pause(["audio1","audio2","audio3","audio4"]);'> Pause </div>
 					</div>
-					
+
                    </div>
                 </article>  
 				
