@@ -409,6 +409,10 @@ App.SectionManager = {
 		var valid = false;
 		
         if(!this.firstRun){
+            stop();
+            stopAllVideos();
+            document.getElementById("musicInteractive1_btn").innerHTML = "Abspielen";
+            playMusicBeispiel1 = false;
             
             if(this.currentSection === parentSection.id){
                 // validate if we have any validator modules in this article
@@ -419,6 +423,7 @@ App.SectionManager = {
                         canProceed = canProceed && validatorResult;
 						valid = true;
                         currentModule.finished = validatorResult;
+
                     } else {
                         canProceed = canProceed && true;
                     }
