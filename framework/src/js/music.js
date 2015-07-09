@@ -1,11 +1,13 @@
 
-			var COUNTAUDIOFILES = 4;
+			var COUNTAUDIOFILES = 12;
 			var COUNTVIDEOAUDIOFILES = 8;
 			var COUNTVIDEOFILES = 4;
 			var VIDEOSUNLOCKED = 0;
 
 
 			var playMusicBeispiel1 = false;
+			var playMusicBeispiel2 = false;
+			var playMusicBeispiel3 = false;
 
 			window.onload = function () {
 				for(var i = 1; i <= COUNTAUDIOFILES; i++){
@@ -15,13 +17,25 @@
 				for(var i = 1; i <= VIDEOSUNLOCKED; i++){
 					videoSetVisible(i);
 				}
+				
+				if (VIDEOSUNLOCKED > 0){
+				document.getElementById("welcome").innerHTML = "Gratuliere, Sie haben bisher schon " + VIDEOSUNLOCKED + " Videos freigeschaltet.";
+				} else{
+				document.getElementById("welcome").innerHTML = "Sie haben bisher noch keine Videos freigeschaltet, lösen Sie die Quiz, es lohnt sich.";
+				}
+				
+				
 			};
 			
 			window.onhashchange = function(){
 				stop();
 				stopAllVideos();
 				document.getElementById("musicInteractive1_btn").innerHTML = "Abspielen";
+				document.getElementById("musicInteractive2_btn").innerHTML = "Abspielen";
+				document.getElementById("musicInteractive3_btn").innerHTML = "Abspielen";
 				playMusicBeispiel1 = false;
+				playMusicBeispiel2 = false;
+				playMusicBeispiel3 = false;
 			}
    
 			function play(objects){
@@ -112,7 +126,40 @@
 				}
 			}
 		
-		
+			function musicInteractive2(){
+				if (playMusicBeispiel2 == false) {
+					play(["audio5", "audio6", "audio7", "audio8"]);
+					playMusicBeispiel2 = true;
+					document.getElementById("musicInteractive2_btn").innerHTML = "Pause";
+				}else {
+					pause(["audio5", "audio6", "audio7", "audio8"]);
+					playMusicBeispiel2 = false;
+					document.getElementById("musicInteractive2_btn").innerHTML = "Abspielen";
+
+				}
+			}
+			
+			function musicInteractive3(){
+				if (playMusicBeispiel2 == false) {
+					play(["audio9", "audio10", "audio11", "audio12"]);
+					playMusicBeispiel2 = true;
+					document.getElementById("musicInteractive3_btn").innerHTML = "Pause";
+				}else {
+					pause(["audio9", "audio10", "audio11", "audio12"]);
+					playMusicBeispiel2 = false;
+					document.getElementById("musicInteractive3_btn").innerHTML = "Abspielen";
+
+				}
+			}
+			
+			function ergebnis(){
+													
+				document.getElementById("ergebnis1").innerHTML = "Gratuliere sie haben das Quiz richtig gelöst. Bisher haben sie schon " + VIDEOSUNLOCKED + " Quiz gelöst und Videos freigeschaltet.";
+				document.getElementById("ergebnis2").innerHTML = "Gratuliere sie haben das Quiz richtig gelöst. Bisher haben sie schon " + VIDEOSUNLOCKED + " Quiz gelöst und Videos freigeschaltet.";
+				document.getElementById("ergebnis3").innerHTML = "Gratuliere sie haben das Quiz richtig gelöst. Bisher haben sie schon " + VIDEOSUNLOCKED + " Quiz gelöst und Videos freigeschaltet.";
+				
+				
+			}
 		
 		
 		

@@ -413,6 +413,8 @@ App.SectionManager = {
             stopAllVideos();
             document.getElementById("musicInteractive1_btn").innerHTML = "Abspielen";
             playMusicBeispiel1 = false;
+			  document.getElementById("musicInteractive2_btn").innerHTML = "Abspielen";
+            playMusicBeispiel2 = false;
             
             if(this.currentSection === parentSection.id){
                 // validate if we have any validator modules in this article
@@ -430,6 +432,7 @@ App.SectionManager = {
                 }
 				if(canProceed&&valid){
 					unlockVideo();
+					ergebnis();
 					valid = false;
 				}
             }
